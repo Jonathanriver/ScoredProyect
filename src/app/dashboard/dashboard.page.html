@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="nav-color">
+    <ion-title><b>Home</b></ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/perfil" fill="clear">
+        <ion-icon name="person-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card class="card-stadistics">
+          <ion-card-content>
+            <ion-text class="number-porcentaje">75</ion-text>
+            <p class="text-white">Proyectos registrados</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card class="card-stadistics">
+          <ion-card-content>
+            <ion-text class="number-porcentaje">75%</ion-text>
+            <p class="text-white">Proyectos Terminados</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card class="card-message">
+          <ion-card-content>
+            <p class="text-white-message">Proxima fecha de presentación de proyectos 20/Julio/2025</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        
+            <ion-button expand="block" class="btn-register" (click)="GestionProyectos()">Gestion Proyectos</ion-button>
+         
+            <ion-button *ngIf="show" expand="block" class="btn-register">Gestion Usuarios</ion-button>
+         
+            <ion-button *ngIf="show" expand="block" class="btn-register">Gestion Score</ion-button>
+        
+            <ion-button expand="block" class="btn-register" (click)="Salir()">Cerrar Sesión</ion-button>
+         
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

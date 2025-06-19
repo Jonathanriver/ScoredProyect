@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="nav-color">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Perfil de Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card >
+    <ion-grid>
+      <ion-row class="ion-justify-content-center ion-padding">
+        <ion-col size="12" size-md="8" class="ion-text-center">
+          <img src="../../assets/img/avatar.jpeg" alt="User Avatar" class="user-avatar">
+          <h2>{{ name }} {{ lastname }}</h2>
+          <p>{{rol}}</p>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-padding card-style-line">
+        <ion-col size="12">
+          <ion-list>
+            <ion-item>
+              <ion-input type="text" label="Nombre" labelPlacement="floating" [(ngModel)]="name"
+                name="name"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input type="text" label="Apellido" labelPlacement="floating" [(ngModel)]="lastname"
+                name="lastname"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input type="email" label="Email" labelPlacement="floating" [(ngModel)]="email"
+                name="email"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input type="number" label="Teléfono" labelPlacement="floating" [(ngModel)]="phone"
+                name="phone"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input type="text" label="Rol" labelPlacement="floating" [(ngModel)]="rol" name="rol"></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+        <ion-col size="12">
+          <ion-button expand="full" class="btn-register">Guardar Cambios</ion-button>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </ion-card>
+</ion-content>

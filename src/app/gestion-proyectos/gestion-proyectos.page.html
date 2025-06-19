@@ -1,0 +1,65 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="nav-color">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title><b>Gestion de Proyectos</b></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card class="card-stadistics">
+          <p><b>{{leng_proyect}}</b> proyectos</p>
+          <p>Regsitrados</p>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card class="card-stadistics">
+          <p><b>10</b> proyectos</p>
+          <p>Calificados</p>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-accordion-group>
+          <ion-accordion value="first">
+            <ion-item slot="header" color="light">
+              <ion-label>Proyectos registrados</ion-label>
+            </ion-item>
+            <div class="ion-padding" slot="content">
+              <ion-list>
+                <ion-item *ngFor="let proyect of list_proyect">
+                  <ion-label slot="start"> {{proyect.nombre}}</ion-label>
+                  <ion-button (click)="DetailProyect(proyect.idproyectos)" slot="end" class="btn-nuevo-proyecto"><ion-icon name="search-outline"></ion-icon></ion-button>
+                  <ion-button slot="end" class="btn-nuevo-proyecto"><ion-icon name="shield-checkmark-outline"></ion-icon></ion-button>
+                </ion-item>
+              </ion-list>
+            </div>
+          </ion-accordion>
+          <ion-accordion value="second">
+            <ion-item slot="header" color="light">
+              <ion-label>Proyectos evaluados</ion-label>
+            </ion-item>
+            <div class="ion-padding" slot="content">Second Content</div>
+          </ion-accordion>
+          <ion-accordion value="third">
+            <ion-item slot="header" color="light">
+              <ion-label>Proyectos no aporbados</ion-label>
+            </ion-item>
+            <div class="ion-padding" slot="content">Third Content</div>
+          </ion-accordion>
+        </ion-accordion-group>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-button expand="block" class="btn-nuevo-proyecto" (click)="RegistrarProyect()">Registrar Proyecto</ion-button>
+  </ion-toolbar>
+</ion-footer>

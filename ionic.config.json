@@ -1,0 +1,7 @@
+{
+  "name": "ScoreProjectSena",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

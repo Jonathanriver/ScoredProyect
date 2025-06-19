@@ -1,0 +1,70 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="nav-color">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content-background">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-list>
+            <ion-item class="ion-text-center">
+              <ion-title class="color-text-title"><b>Registro</b></ion-title>
+            </ion-item>
+            <ion-item class="ion-text-center">
+              <ion-label>
+                <p class="color-text-subtitle">Crea una cuenta para acceder a todas las funcionalidades de la aplicación.</p>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-input label="Nombre" type="text" labelPlacement="floating" [(ngModel)]="name" name="name"
+                placeholder="Nombre" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input label="Apellido" type="text" labelPlacement="floating" [(ngModel)]="lastname" name="lastname"
+                placeholder="Apellido" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input label="Teléfono" type="phone" labelPlacement="floating" [(ngModel)]="phone" name="phone"
+                placeholder="Teléfono" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input label="Email" type="email" labelPlacement="floating" [(ngModel)]="email" name="email"
+                placeholder="Email" required></ion-input>
+            </ion-item>
+            <ion-item>
+             <ion-select label="Rol" labelPlacement="floating" name="rol"  [(ngModel)]="rol" required>
+                <ion-select-option value="2">Instructor</ion-select-option>
+                <ion-select-option value="3">Cordinación</ion-select-option>
+                <ion-select-option value="4">Directivo</ion-select-option>
+                <ion-select-option value="5">Aprendiz</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <ion-item>
+              <ion-input label="Contraseña" type="password" labelPlacement="floating"  [(ngModel)]="password" name="password"
+                placeholder="Contraseña" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input label="Confirmar Contraseña" type="password" labelPlacement="floating" [(ngModel)]="confirmPassword" name="confirmPassword"
+                placeholder="Confirmar Contraseña" required></ion-input>
+            </ion-item>
+            
+              <ion-button expand="block" class="btn-register" (click)="Register()">Registrar</ion-button>
+           
+            <ion-item class="ion-text-center">
+              <ion-label>
+                ¿Ya tienes una cuenta? <a routerLink="/login" class="color-link">Inicia sesión</a>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
