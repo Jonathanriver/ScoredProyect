@@ -1,13 +1,44 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>gestion_usuarios</ion-title>
+  <ion-toolbar class="nav-color">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title><b>Gestion Usuarios</b></ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">gestion_usuarios</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <p>Gestione los usuarios que usaran la aplicación desde este apartado.</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-content class="ion-text-center">
+            <h1>{{leng_users}}</h1>
+            <p>Usuarios registrados</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item *ngFor="let user of list_users">
+            <ion-text slot="start">{{user.name}}</ion-text><ion-icon color="success" slot="end" name="person-circle-outline"></ion-icon>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button class="btn-nuevo-proyecto" expand="full" (click)="AgregarUsuarios()">
+          Agregar Usuario
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

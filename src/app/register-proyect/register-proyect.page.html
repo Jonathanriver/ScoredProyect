@@ -37,49 +37,49 @@
           [(ngModel)]="ficha" name="ficha"></ion-textarea>
       </ion-item>
       <ion-item>
+        <ion-input label="Trimestre Formación" labelPlacement="floating" placeholder="Trimestre Formación"
+          [(ngModel)]="trimestre" name="trimestre"></ion-input>
+      </ion-item>
+      <!-- <ion-item>
         <ion-textarea label="Usuario Veedor" labelPlacement="floating" placeholder="Usuario Veedor" [(ngModel)]="veedor"
           name="veedor"></ion-textarea>
-      </ion-item>
+      </ion-item> -->
       <ion-item style="--background: silver;">
         <ion-text>
           <b>Back-end</b>
         </ion-text>
       </ion-item>
       <ion-item>
-        <ion-checkbox>Php</ion-checkbox>
+        <ion-select label="Tecnologia Back" label-placement="floating" [(ngModel)]="tecnologiaBack" name="tecnologiaBack">
+          <ion-select-option value="Python">Python</ion-select-option>
+          <ion-select-option value="Php">Php</ion-select-option>
+          <ion-select-option value="Java">Java</ion-select-option>
+          <ion-select-option value="Node.Js">Node.Js</ion-select-option>
+        </ion-select>
       </ion-item>
-      <ion-item>
-        <ion-checkbox>Python</ion-checkbox>
-      </ion-item>
-      <ion-item>
-        <ion-checkbox>Java</ion-checkbox>
-      </ion-item>
-      <ion-item>
-        <ion-checkbox>Javascript (Node.js, Express, Frameworks...)</ion-checkbox>
-      </ion-item>
-      <ion-item>
-        <ion-checkbox>Kotlin</ion-checkbox>
-      </ion-item>
+
       <ion-item style="--background: silver;">
         <ion-text>
           <b>Front-end</b>
         </ion-text>
       </ion-item>
       <ion-item>
-        <ion-checkbox>Html, Css, MediaQuery, Responsive, Bootstrap</ion-checkbox>
+        <ion-select label="Tecnologia Front" label-placement="floating" [(ngModel)]="tecnologiaFront" name="tecnologiaFront">
+          <ion-select-option value="Html, Css, Resposive">Html, Css, Resposive</ion-select-option>
+          <ion-select-option value="Angular">Angular</ion-select-option>
+          <ion-select-option value="React">React</ion-select-option>
+          <ion-select-option value="Vue">Vue</ion-select-option>
+          <ion-select-option value="Ionic">Ionic</ion-select-option>
+        </ion-select>
       </ion-item>
-      <ion-item>
-        <ion-checkbox>Angular</ion-checkbox>
-      </ion-item>
-      <ion-item>
-        <ion-checkbox>React</ion-checkbox>
-      </ion-item>
-      <ion-item>
-        <ion-checkbox>Vue</ion-checkbox>
-      </ion-item>
-      <ion-item>
-        <ion-checkbox>Ionic Framework</ion-checkbox>
-      </ion-item> 
+
     </ion-list>
+
+    <ion-row>
+      <ion-col>
+        <ion-button class="btn-nuevo-proyecto" expand="full" (click)="RegistrarProyecto()">Registrar
+          Proyecto</ion-button>
+      </ion-col>
+    </ion-row>
   </ion-card>
 </ion-content>

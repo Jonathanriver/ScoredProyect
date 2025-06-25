@@ -15,7 +15,7 @@
       <ion-col>
         <ion-card class="card-stadistics">
           <ion-card-content>
-            <ion-text class="number-porcentaje">75</ion-text>
+            <ion-text class="number-porcentaje">{{leng_proyect}}</ion-text>
             <p class="text-white">Proyectos registrados</p>
           </ion-card-content>
         </ion-card>
@@ -23,7 +23,7 @@
       <ion-col>
         <ion-card class="card-stadistics">
           <ion-card-content>
-            <ion-text class="number-porcentaje">75%</ion-text>
+            <ion-text class="number-porcentaje">{{leng_proyects_terminate}}</ion-text>
             <p class="text-white">Proyectos Terminados</p>
           </ion-card-content>
         </ion-card>
@@ -43,9 +43,9 @@
         
             <ion-button expand="block" class="btn-register" (click)="GestionProyectos()">Gestion Proyectos</ion-button>
          
-            <ion-button *ngIf="show" expand="block" class="btn-register">Gestion Usuarios</ion-button>
+            <ion-button *ngIf="show" expand="block" class="btn-register" (click)="GestionUsuarios()">Gestion Usuarios</ion-button>
          
-            <ion-button *ngIf="show" expand="block" class="btn-register">Gestion Score</ion-button>
+            <ion-button *ngIf="show" expand="block" class="btn-register" (click)="GestionScore()">Gestion Score</ion-button>
         
             <ion-button expand="block" class="btn-register" (click)="Salir()">Cerrar Sesión</ion-button>
          

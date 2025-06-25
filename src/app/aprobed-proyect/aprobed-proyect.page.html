@@ -1,0 +1,149 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="nav-color">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title><b>Calificar Proyecto</b></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item>
+            <ion-text slot="start">Nombre del Proyecto:</ion-text>
+            <ion-text slot="end">{{nombre}}</ion-text>
+          </ion-item>
+          <ion-item>
+            <ion-text slot="start">Descripción:</ion-text>
+            <ion-text slot="end">{{descripcion}}</ion-text>
+          </ion-item>
+          <ion-item>
+            <ion-select label="Presentación" label-placement="Presentación" [(ngModel)]="presentacion" name="presentacion">
+              <ion-select-option value="1">1</ion-select-option>
+              <ion-select-option value="2">2</ion-select-option>
+              <ion-select-option value="3">3</ion-select-option>
+              <ion-select-option value="4">4</ion-select-option>
+              <ion-select-option value="5">5</ion-select-option>
+              <ion-select-option value="6">6</ion-select-option>
+              <ion-select-option value="7">7</ion-select-option>
+              <ion-select-option value="8">8</ion-select-option>
+              <ion-select-option value="9">9</ion-select-option>
+              <ion-select-option value="10">10</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-textarea label="Observación" placeholder="Type something here" [(ngModel)]="observacion_presentacion" name="observacion_presentacion"></ion-textarea>
+          </ion-item>
+          <ion-item>
+            <ion-select label="Trabajo en equipo" label-placement="Trabajo en equipo" [(ngModel)]="trabajo_equipo" name="trabajo_equipo">
+              <ion-select-option value="1">1</ion-select-option>
+              <ion-select-option value="2">2</ion-select-option>
+              <ion-select-option value="3">3</ion-select-option>
+              <ion-select-option value="4">4</ion-select-option>
+              <ion-select-option value="5">5</ion-select-option>
+              <ion-select-option value="6">6</ion-select-option>
+              <ion-select-option value="7">7</ion-select-option>
+              <ion-select-option value="8">8</ion-select-option>
+              <ion-select-option value="9">9</ion-select-option>
+              <ion-select-option value="10">10</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-textarea label="Observación" placeholder="Type something here" [(ngModel)]="observacion_trabajo_equipo" name="observacion_trabajo_equipo"></ion-textarea>
+          </ion-item>
+          <ion-item>
+            <ion-select label="Desarrollo" label-placement="Desarrollo" [(ngModel)]="desarrollo" name="desarrollo">
+              <ion-select-option value="1">1</ion-select-option>
+              <ion-select-option value="2">2</ion-select-option>
+              <ion-select-option value="3">3</ion-select-option>
+              <ion-select-option value="4">4</ion-select-option>
+              <ion-select-option value="5">5</ion-select-option>
+              <ion-select-option value="6">6</ion-select-option>
+              <ion-select-option value="7">7</ion-select-option>
+              <ion-select-option value="8">8</ion-select-option>
+              <ion-select-option value="9">9</ion-select-option>
+              <ion-select-option value="10">10</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-textarea label="Observación" placeholder="Type something here" [(ngModel)]="observacion_desarrollo" name="observacion_desarrollo"></ion-textarea>
+          </ion-item>
+          <ion-item>
+            <ion-select label="Front" label-placement="Front" [(ngModel)]="front" name="front">
+              <ion-select-option value="1">1</ion-select-option>
+              <ion-select-option value="2">2</ion-select-option>
+              <ion-select-option value="3">3</ion-select-option>
+              <ion-select-option value="4">4</ion-select-option>
+              <ion-select-option value="5">5</ion-select-option>
+              <ion-select-option value="6">6</ion-select-option>
+              <ion-select-option value="7">7</ion-select-option>
+              <ion-select-option value="8">8</ion-select-option>
+              <ion-select-option value="9">9</ion-select-option>
+              <ion-select-option value="10">10</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-textarea label="Observación" placeholder="Type something here" [(ngModel)]="observacion_front" name="observacion_front"></ion-textarea>
+          </ion-item>
+          <ion-item>
+            <ion-select label="Back" label-placement="Back" [(ngModel)]="back" name="back">
+              <ion-select-option value="1">1</ion-select-option>
+              <ion-select-option value="2">2</ion-select-option>
+              <ion-select-option value="3">3</ion-select-option>
+              <ion-select-option value="4">4</ion-select-option>
+              <ion-select-option value="5">5</ion-select-option>
+              <ion-select-option value="6">6</ion-select-option>
+              <ion-select-option value="7">7</ion-select-option>
+              <ion-select-option value="8">8</ion-select-option>
+              <ion-select-option value="9">9</ion-select-option>
+              <ion-select-option value="10">10</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-textarea label="Observación" placeholder="Type something here" [(ngModel)]="observacion_back" name="observacion_back"></ion-textarea>
+          </ion-item>
+          <ion-item>
+            <ion-select label="Documentación" label-placement="Documentación" [(ngModel)]="documentacion" name="documentacion">
+              <ion-select-option value="1">1</ion-select-option>
+              <ion-select-option value="2">2</ion-select-option>
+              <ion-select-option value="3">3</ion-select-option>
+              <ion-select-option value="4">4</ion-select-option>
+              <ion-select-option value="5">5</ion-select-option>
+              <ion-select-option value="6">6</ion-select-option>
+              <ion-select-option value="7">7</ion-select-option>
+              <ion-select-option value="8">8</ion-select-option>
+              <ion-select-option value="9">9</ion-select-option>
+              <ion-select-option value="10">10</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-textarea label="Observación" placeholder="Type something here" [(ngModel)]="observacion_documentacion" name="observacion_documentacion"></ion-textarea>
+          </ion-item>
+          <ion-item>
+            <ion-select label="Requerimientos" label-placement="Requerimientos" [(ngModel)]="requerimientos" name="requerimientos">
+              <ion-select-option value="1">1</ion-select-option>
+              <ion-select-option value="2">2</ion-select-option>
+              <ion-select-option value="3">3</ion-select-option>
+              <ion-select-option value="4">4</ion-select-option>
+              <ion-select-option value="5">5</ion-select-option>
+              <ion-select-option value="6">6</ion-select-option>
+              <ion-select-option value="7">7</ion-select-option>
+              <ion-select-option value="8">8</ion-select-option>
+              <ion-select-option value="9">9</ion-select-option>
+              <ion-select-option value="10">10</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-textarea label="Observación" placeholder="Type something here" [(ngModel)]="observacion_requerimientos" name="observacion_requerimientos"></ion-textarea>
+          </ion-item>
+
+            <ion-button expand="block" class="btn-nuevo-proyecto" (click)="Calificar()">Calificar</ion-button>
+
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

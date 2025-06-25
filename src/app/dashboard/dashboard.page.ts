@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { AlertController } from '@ionic/angular';
 
@@ -11,12 +12,15 @@ import { AlertController } from '@ionic/angular';
 })
 export class DashboardPage implements OnInit {
 
-
+  leng_proyect: number = 0;
+  leng_proyects_terminate = 0;
   show: any;
 
   constructor(
     public alertController: AlertController,
-    public router: Router
+    public http: HttpClient,
+    public router: Router,
+    private route: ActivatedRoute
   ) {
     let userData = localStorage.getItem('user');
     let rol
@@ -38,8 +42,8 @@ export class DashboardPage implements OnInit {
     }
   }
 
-  ngOnInit() {
-
+  async ngOnInit() {
+    await this.consulatProyect();
   }
 
   Salir() {
@@ -64,8 +68,30 @@ export class DashboardPage implements OnInit {
   }
 
 
+  consulatProyect() {
+    this.http.get<any[]>('http://127.0.0.1:8000/proyectos')
+      .subscribe(value => {
+        this.leng_proyect = value.length;
+        value.forEach(element => {
+          if (element.estado == 1) {
+            this.leng_proyects_terminate++;
+          }
+        });
+      });
+  }
+
+
   GestionProyectos() {
     this.router.navigateByUrl('gestion-proyectos');
+  }
+
+
+  GestionUsuarios() {
+    this.router.navigateByUrl('gestion-usuarios');
+  }
+
+  GestionScore() {
+    this.router.navigateByUrl('gestion-score');
   }
 
 }

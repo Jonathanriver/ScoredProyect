@@ -19,6 +19,8 @@ export class RegisterPage implements OnInit {
   email = '';
   password = '';
   confirmPassword = '';
+  sesion: any;
+  show: any;
 
 
 
@@ -29,6 +31,20 @@ export class RegisterPage implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.sesion = localStorage.getItem('user')
+    if (this.sesion) {
+      let us = JSON.parse(this.sesion)
+
+      if (us.name) {
+        this.show = false
+      } else {
+        this.show = true
+      }
+    }else{
+      this.show = true
+    }
+
+
   }
 
   Register(): boolean {

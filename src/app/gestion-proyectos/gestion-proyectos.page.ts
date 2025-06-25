@@ -12,7 +12,10 @@ export class GestionProyectosPage implements OnInit {
 
 
   list_proyect: any[] = [];
+  list_proyects_terminate: any[] = [];
+  list_proyects_sin_terminate: any[] = [];
   leng_proyect: number = 0;
+  leng_proyects_terminate = 0;
 
   constructor(
     public http: HttpClient,
@@ -25,22 +28,27 @@ export class GestionProyectosPage implements OnInit {
       .subscribe(value => {
         this.list_proyect = value;
         this.leng_proyect = value.length;
-        console.log(this.list_proyect);
-
-
+        value.forEach(element => {
+          if (element.aprobado_status == 1) {
+            this.leng_proyects_terminate++; 
+            this.list_proyects_terminate.push(element);
+          }else if (element.aprobado_status == 0) {
+            this.list_proyects_sin_terminate.push(element);
+          }
+        });
       });
   }
 
   DetailProyect(id: any) {
-   this.router.navigate(
-    ['/detail-proyect'],
-    {queryParams: {id: id}}
-   )
+    this.router.navigate(
+      ['/detail-proyect'],
+      { queryParams: { id: id } }
+    )
 
   }
 
 
-  RegistrarProyect(){
+  RegistrarProyect() {
     this.router.navigateByUrl('/register-proyect')
   }
 }

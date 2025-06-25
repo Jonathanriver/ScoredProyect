@@ -47,6 +47,10 @@ const routes: Routes = [
     path: 'register-proyect',
     loadChildren: () => import('./register-proyect/register-proyect.module').then( m => m.RegisterProyectPageModule)
   },
+  {
+    path: 'aprobed-proyect',
+    loadChildren: () => import('./aprobed-proyect/aprobed-proyect.module').then( m => m.AprobedProyectPageModule)
+  },
 ];
 
 @NgModule({

@@ -18,7 +18,7 @@
       </ion-col>
       <ion-col>
         <ion-card class="card-stadistics">
-          <p><b>10</b> proyectos</p>
+          <p><b>{{leng_proyects_terminate}}</b> proyectos</p>
           <p>Calificados</p>
         </ion-card>
       </ion-col>
@@ -35,7 +35,7 @@
                 <ion-item *ngFor="let proyect of list_proyect">
                   <ion-label slot="start"> {{proyect.nombre}}</ion-label>
                   <ion-button (click)="DetailProyect(proyect.idproyectos)" slot="end" class="btn-nuevo-proyecto"><ion-icon name="search-outline"></ion-icon></ion-button>
-                  <ion-button slot="end" class="btn-nuevo-proyecto"><ion-icon name="shield-checkmark-outline"></ion-icon></ion-button>
+                  <!-- <ion-button slot="end" class="btn-nuevo-proyecto"><ion-icon name="shield-checkmark-outline"></ion-icon></ion-button> -->
                 </ion-item>
               </ion-list>
             </div>
@@ -44,13 +44,29 @@
             <ion-item slot="header" color="light">
               <ion-label>Proyectos evaluados</ion-label>
             </ion-item>
-            <div class="ion-padding" slot="content">Second Content</div>
+            <div class="ion-padding" slot="content">
+              <ion-list>
+                <ion-item *ngFor="let proyect of list_proyects_terminate">
+                  <ion-label slot="start"> {{proyect.nombre}}</ion-label>
+                  <ion-button (click)="DetailProyect(proyect.idproyectos)" slot="end" class="btn-nuevo-proyecto"><ion-icon name="search-outline"></ion-icon></ion-button>
+                  <!-- <ion-button slot="end" class="btn-nuevo-proyecto"><ion-icon name="shield-checkmark-outline"></ion-icon></ion-button> -->
+                </ion-item>
+              </ion-list>
+            </div>
           </ion-accordion>
           <ion-accordion value="third">
             <ion-item slot="header" color="light">
               <ion-label>Proyectos no aporbados</ion-label>
             </ion-item>
-            <div class="ion-padding" slot="content">Third Content</div>
+            <div class="ion-padding" slot="content">
+              <ion-list>
+                <ion-item *ngFor="let proyect of list_proyects_sin_terminate">
+                  <ion-label slot="start"> {{proyect.nombre}}</ion-label>
+                  <ion-button (click)="DetailProyect(proyect.idproyectos)" slot="end" class="btn-nuevo-proyecto"><ion-icon name="search-outline"></ion-icon></ion-button>
+                  <!-- <ion-button slot="end" class="btn-nuevo-proyecto"><ion-icon name="shield-checkmark-outline"></ion-icon></ion-button> -->
+                </ion-item>
+              </ion-list>
+            </div>
           </ion-accordion>
         </ion-accordion-group>
       </ion-col>

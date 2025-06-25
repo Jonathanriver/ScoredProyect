@@ -56,7 +56,7 @@
             
               <ion-button expand="block" class="btn-register" (click)="Register()">Registrar</ion-button>
            
-            <ion-item class="ion-text-center">
+            <ion-item class="ion-text-center" *ngIf="show">
               <ion-label>
                 ¿Ya tienes una cuenta? <a routerLink="/login" class="color-link">Inicia sesión</a>
               </ion-label>

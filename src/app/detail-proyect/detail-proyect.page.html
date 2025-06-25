@@ -11,97 +11,105 @@
   <ion-grid>
     <ion-row>
       <ion-col>
+
         <ion-card>
-          <ion-card>
-            <ion-card-header class="nav-color ion-text-center">
-              <ion-text><b>{{nombre}}</b></ion-text>
-            </ion-card-header>
-            <ion-card-content>
-              <img
-                src="https://media.istockphoto.com/id/1411195926/es/foto/gerente-de-proyecto-trabajando-en-la-computadora-port%C3%A1til-y-actualizando-tareas-y.jpg?s=612x612&w=0&k=20&c=6uwLBlqeSiASLU-r5fWh6A9GkAtxcQIDBRDw4LStggU="
-                alt="" class="">
-              <p class="decription-style">{{descripcion}}</p>
-              <ion-list>
-                <ion-item>
-                  <ion-text slot="start" style="font-size: 11px;">Integrantes:</ion-text><ion-text
-                    style="font-size: 11px;" slot="end">{{integrantes}}</ion-text>
-                </ion-item>
-                <ion-item>
-                  <ion-text slot="start" style="font-size: 11px;">Ficha:</ion-text><ion-text style="font-size: 11px;"
-                    slot="end">{{ficha}}</ion-text>
-                </ion-item>
-                <ion-item>
-                  <ion-text slot="start" style="font-size: 11px;">Trimestre:</ion-text><ion-text style="font-size: 11px;"
-                    slot="end">{{trimestre}}</ion-text>
-                </ion-item>
-                <ion-item>
-                  <ion-text slot="start" style="font-size: 11px;">Estado:</ion-text><ion-text style="font-size: 11px;"
-                    slot="end">{{estado}}</ion-text>
-                </ion-item>
-              </ion-list>
-              <ion-grid>
-                <ion-row>
-                  <ion-col class="ion-text-center">
-                    <b>Calificación</b>
-                  </ion-col>
-                </ion-row>
-                <ion-row>
-                  <ion-col>
-                    Pitch:
-                  </ion-col>
-                  <ion-col>
-                    1
-                  </ion-col>
-                </ion-row>
-                <ion-row>
-                  <ion-col>
-                    Material Apoyo:
-                  </ion-col>
-                  <ion-col>
-                    1
-                  </ion-col>
-                </ion-row>
-                <ion-row>
-                  <ion-col>
-                    Funcionalidad:
-                  </ion-col>
-                  <ion-col>
-                    1
-                  </ion-col>
-                </ion-row>
-                <ion-row>
-                  <ion-col>
-                    Errores:
-                  </ion-col>
-                  <ion-col>
-                    1
-                  </ion-col>
-                </ion-row>
-                <ion-row>
-                  <ion-col>
-                    Trabajo en equipo:
-                  </ion-col>
-                  <ion-col>
-                    1
-                  </ion-col>
-                </ion-row>
-                <ion-row>
-                  <ion-col>
-                    Documentación:
-                  </ion-col>
-                  <ion-col>
-                    1
-                  </ion-col>
-                </ion-row>
-                <ion-row>
-                  <ion-col>
-                    <ion-button expand="full" class="btn-nuevo-proyecto">Calificar</ion-button>
-                  </ion-col>
-                </ion-row>
-              </ion-grid>
-            </ion-card-content>
-          </ion-card>
+          <ion-card-header class="nav-color ion-text-center">
+            <ion-text><b>{{nombre}}</b></ion-text>
+          </ion-card-header>
+          <ion-card-content>
+            <img
+              src="https://media.istockphoto.com/id/1411195926/es/foto/gerente-de-proyecto-trabajando-en-la-computadora-port%C3%A1til-y-actualizando-tareas-y.jpg?s=612x612&w=0&k=20&c=6uwLBlqeSiASLU-r5fWh6A9GkAtxcQIDBRDw4LStggU="
+              alt="" class="">
+            <p class="decription-style">{{descripcion}}</p>
+            <ion-list>
+              <ion-item>
+                <ion-text slot="start" style="font-size: 11px;">Integrantes:</ion-text><ion-text
+                  style="font-size: 11px;" slot="end">{{integrantes}}</ion-text>
+              </ion-item>
+              <ion-item>
+                <ion-text slot="start" style="font-size: 11px;">Ficha:</ion-text><ion-text style="font-size: 11px;"
+                  slot="end">{{ficha}}</ion-text>
+              </ion-item>
+              <ion-item>
+                <ion-text slot="start" style="font-size: 11px;">Trimestre:</ion-text><ion-text style="font-size: 11px;"
+                  slot="end">{{trimestre}}</ion-text>
+              </ion-item>
+              <ion-item>
+                <ion-text slot="start" style="font-size: 11px;">Estado:</ion-text><ion-text style="font-size: 11px;"
+                  slot="end">{{estado}}</ion-text>
+              </ion-item>
+            </ion-list>
+            <ion-grid>
+              <ion-row>
+                <ion-col class="ion-text-center">
+                  <b>Calificación</b>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  Pitch:
+                </ion-col>
+                <ion-col>
+                  {{presentacion}}
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  Trabajo ne equipo:
+                </ion-col>
+                <ion-col>
+                  {{trabajo_equipo}}
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  Desarrollo:
+                </ion-col>
+                <ion-col>
+                  {{desarrollo}}
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  Front:
+                </ion-col>
+                <ion-col>
+                  {{front}}
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  Back:
+                </ion-col>
+                <ion-col>
+                  {{back}}
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  Documentación:
+                </ion-col>
+                <ion-col>
+                  {{documentacion}}
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  Requerimientos:
+                </ion-col>
+                <ion-col>
+                  {{requerimientos}}
+                </ion-col>
+              </ion-row>
+              <ion-row *ngIf="show">
+                <ion-col>
+                  <ion-button expand="full" class="btn-nuevo-proyecto" (click)="CalificarProyecto()">Calificar</ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
         </ion-card>
+
       </ion-col>
     </ion-row>
   </ion-grid>
